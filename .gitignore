@@ -2,3 +2,4 @@
 /.cache
 /build
 *.marko.js
+.DS_Store
