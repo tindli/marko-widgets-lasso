@@ -8,7 +8,7 @@ module.exports = require('marko-widgets').defineComponent({
     getInitialState: function(input) {
         
         return {
-            pseudo: false,
+            pseudo: false, // purely internally managed state
             malicious: [] // this tricks the component into re-renders!
         }
     },
