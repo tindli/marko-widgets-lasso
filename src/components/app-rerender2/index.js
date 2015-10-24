@@ -8,18 +8,23 @@ module.exports = require('marko-widgets').defineComponent({
     getInitialState: function(input) {
         
         return {
-            pseudo: 0,
+            pseudo: false,
             malicious: [] // this tricks the component into re-renders!
         }
     },
     getTemplateData: function(state, input) {
         
         return {
-            timestamp: Date.now()
+            timestamp: Date.now(),
+            pseudo: state.pseudo
         };
     },
 
     onRender: function() {
         console.log("on render app-rerender 2");
+    },
+    
+    handleClick: function() {
+        this.setState("pseudo", true);
     }
 });
