@@ -6,5 +6,8 @@
 
     <app-rerender1 w-id="test-rerender1"/>
     <app-rerender2 w-id="test-rerender2"/>
-
+    
+    <app-rerender3 w-id="test-rerender3" aProp="parent">
+        <ul><li><app-rerender3 aProp="child"/></li></ul>
+    </app-rerender3>
 </div>
