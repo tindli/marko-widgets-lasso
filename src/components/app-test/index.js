@@ -1,5 +1,3 @@
-var prop1 = "parent";
-var prop2 = "child";
 
 
 module.exports = require('marko-widgets').defineComponent({
@@ -8,9 +6,9 @@ module.exports = require('marko-widgets').defineComponent({
     getInitialState: function(input) {
 
         return {
-            counter: 0,
-            myProp1: prop1,
-            myProp2: prop2
+            counter: input.counter,
+            myProp1: input.prop1,
+            myProp2: input.prop2
         };
     },
     getTemplateData: function(state, input) {
