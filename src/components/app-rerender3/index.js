@@ -8,13 +8,13 @@ module.exports = require('marko-widgets').defineComponent({
     getInitialState: function(input) {
         
         return {
-            aProp: input.aProp
+            myProp: input.myProp
         }
     },
     getTemplateData: function(state, input) {
         
         return {
-            aProp: state.aProp
+            myProp: state.myProp
         };
     },
     
