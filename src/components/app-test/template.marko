@@ -10,4 +10,24 @@
     <app-rerender3 w-id="test-rerender3" myProp="$data.myProp1">
         <ul><li><app-rerender3 myProp="$data.myProp2"/></li></ul>
     </app-rerender3>
+    
+    
+    <input type="button" w-onClick="handleListPush" value="Push item push"/>
+    <input type="button" w-onClick="handleListUnshift" value="Unshift item"/>
+    
+    <div>LIST ITEMS:</div>
+    
+    <ul>
+        <li for="item in data.list">
+            <!-- No problem when using this
+            <div w-id="$item.idxCount">Item: $item.idxCount, ts: $item.ts</div>
+            -->
+            
+            <!-- Problem when using the following component -->
+            <app-list-item w-id="$item.idxCount" idxCount="$item.idxCount" ts="$item.ts" />
+        </li> 
+    </ul>
+    
+    
+    
 </div>
